@@ -15,8 +15,7 @@ class CreateRaksTable extends Migration
     {
         Schema::create('raks', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_gudang');
-            $table->foreignId('id_gudang')->references('id')->on('gudangs');
+            $table->unsignedBigInteger('id_gudang')->foreignId('id_gudang')->references('id')->on('gudangs');
             $table->string('kode_rak',10);
             $table->timestamps();
         });
